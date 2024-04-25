@@ -1,9 +1,69 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="My first webpage, with JavaScript" />
+    <meta name="keywords" content="mths, ics2o" />
+    <meta name="author" content="Giordan Zeina" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/getmdl-select.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-indigo.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <!-- This is the title of the webpage -->
+    <title>Postive or Negative #, in JS</title>
   </head>
   <body>
-    <p>Paragraph</p>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/getmdl-select.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- This is the header of the webpage -->
+          <span class="mdl-layout-title"><h3>Positive or Negative #, in JS</h3></span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div id="image">
+          <img class="right-image" src="./images/positive_negative.jpg" alt="positive_negative" width="350" />
+        </div>
+        <div class="page-content">
+          <div id="instructions">
+            Select a Positive or Negative number.
+          </div>
+        </div>
+        <br />
+          <form action="#">
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="positive">
+          <input type="radio" id="positive" class="mdl-radio__button" name="options" value="1" checked>
+          <span class="mdl-radio__label">Positive</span>
+        </label>
+        <br />
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="negative">
+          <input type="radio" id="negative" class="mdl-radio__button" name="options" value="1">
+          <span class="mdl-radio__label">Negative</span>
+        </label>
+        <br />
+        <br />
+        <!-- Colored raised button -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+          onclick="myButtonClicked()"
+        >
+          Generate
+        </button>
+        </form>
+        <br />
+        <br />
+        <div class="page-content-answer">
+          <div id="answer"></div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
